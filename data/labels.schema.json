@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Objections Labels Schema",
+  "type": "object",
+  "properties": {
+    "filename": {"type": "string"},
+    "objections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sentence_text": {"type": "string"},
+          "objection_category": {"type": ["string", "null"]},
+          "rebuttal_category": {"type": ["string", "null"]}
+        },
+        "required": ["sentence_text"]
+      }
+    }
+  },
+  "required": ["filename", "objections"]
+}
